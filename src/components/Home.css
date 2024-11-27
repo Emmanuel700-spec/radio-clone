@@ -1,0 +1,103 @@
+.home-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #540f0f; /* Blended dark red with black */
+    color: #F4F4F4; /* Text color for contrast (Grey 10) */
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjusted to content */
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(248, 2, 2, 0.5);
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content h5 {
+    font-size: 40px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+  }
+  
+  .features {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .authentication-section {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .authentication-section button {
+    padding: 10px 20px;
+    background-color: #0051ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .authentication-section a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+  }
+  
+  .card p {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+  

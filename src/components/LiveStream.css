@@ -1,0 +1,91 @@
+.live-stream {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+}
+
+.live-stream h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #212529; 
+}
+
+.live-stream-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.stream-card {
+  position: relative; /* Enable positioning for overlay elements */
+  width: 100%;
+  max-width: 300px;
+  background: #fff; /* White background */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stream-logo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.stream-info {
+  padding: 15px;
+}
+
+.stream-info h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #007bff; /* Bootstrap's primary blue color */
+  font-weight: 600;
+  text-align: left;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+
+.stream-card:hover .stream-info h4 {
+  color: #f39c12;
+}
+
+.stream-info p {
+  font-size: 1rem;
+  color: #6c757d; 
+  margin-top: 5px;
+  text-align: left;
+}
+
+
+/* Play button overlay */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.play-button::before {
+  content: "▶";
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stream-card:hover .play-button {
+  opacity: 1; /* Show the play button on hover */
+}

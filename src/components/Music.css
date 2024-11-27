@@ -1,0 +1,242 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* BBC Radio uses a sans-serif font */
+    background-color: #060606; /* Dark background to match BBC Radio's dark theme */
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Home Page Styles */
+.home-page {
+    padding: 20px;
+    text-align: center;
+    background-color: #383737;
+    min-height: 100vh; /* Ensures the page takes the full viewport height */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
+    color: #fff;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+/* Live Player Section */
+.live-player {
+    margin: 20px auto;
+}
+
+/* Now Playing Section */
+.now-playing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Album Art Styling - Circular Image */
+.album-art {
+    width: 120px; /* Adjust the size of the image */
+    height: 120px; /* Adjust the size of the image */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px;
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+}
+
+/* Track Info Styling */
+.track-info {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Audio Player Container */
+.audio-player {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Schedule Section */
+.schedule {
+    margin-top: 40px;
+}
+
+/* Audio Player Controls Section */
+.audio-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Audio Controls Styling */
+.audio-controls {
+    display: flex;
+    justify-content: space-around; /* More space around the controls */
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Control Icon Button Styling */
+.control-icon {
+    font-size: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px; /* More padding for a button-like feel */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover background */
+}
+
+.control-icon:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Lighter hover effect */
+    color: #f39c12; /* BBC Radio-like accent color */
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+    padding-right: 0%;
+
+}
+
+.volume-slider {
+    width: 80px; /* Slightly wider volume slider */
+    margin-left: 10px;
+}
+
+/* Music Progress Bar Section */
+.music-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Progress Bar Input Element */
+.progress-bar input {
+    width: 200%;
+    height: 100%;
+    appearance: none;
+    background-color: #f39c12;
+    border-radius: 5px;
+}
+
+/* Slider Thumb Styles */
+.progress-bar input::-webkit-slider-thumb,
+.progress-bar input::-moz-range-thumb,
+.progress-bar input::-ms-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Progress Text Styling */
+.music-progress span {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Circle button styles for 'Start' and 'Live' */
+.circle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f39c12; /* Golden color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: #e67e22; /* Darker golden color on hover */
+}
+
+.circle-icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+.button-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .audio-controls {
+        justify-content: center;
+    }
+
+    .album-art {
+        width: 100px;
+        height: 100px;
+    }
+
+    .now-playing {
+        flex-direction: column;
+    }
+
+    .track-info {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.4em; /* Adjust header size for small screens */
+    }
+
+    .audio-player {
+        max-width: 100%;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .progress-bar input::-webkit-slider-thumb,
+    .progress-bar input::-moz-range-thumb,
+    .progress-bar input::-ms-thumb {
+        width: 12px;
+        height: 12px;
+    }
+
+    .control-icon {
+        font-size: 24px;
+    }
+
+    .volume-slider {
+        width: 60px;
+    }
+}

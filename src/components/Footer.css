@@ -1,0 +1,76 @@
+/* Global Footer Styling */
+.footer {
+  background-color: #000000; /* Black background for the footer */
+  padding: 40px 20px; /* More padding for a spacious footer */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* White text color */
+  border-top: 1px solid #2e2e2e; /* Slightly darker border */
+  text-align: center;
+}
+
+/* Links Styling */
+.footer a {
+  text-decoration: none;
+  color: #ffffff; /* White links */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+  color: #0073e6; /* Blue color for links on hover */
+}
+
+/* Flexbox Layout for Footer Sections */
+.footer-links,
+.footer-policy,
+.footer-ads {
+  margin-bottom: 20px;
+}
+
+.footer-links ul,
+.footer-policy ul,
+.footer-ads ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Wrap the list items for responsiveness */
+  justify-content: center; /* Center the links */
+  gap: 15px; /* Space between the list items */
+}
+
+.footer-links a,
+.footer-policy a,
+.footer-ads a {
+  font-weight: bold; /* Make links bold */
+  font-size: 14px;
+}
+
+/* Copyright Section */
+.footer-copyright {
+  font-size: 12px;
+  color: #bbbbbb; /* Light gray color for copyright text */
+  padding-top: 10px;
+}
+
+.footer-copyright a {
+  color: #0073e6; /* Link color for external linking */
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .footer-links ul,
+  .footer-policy ul,
+  .footer-ads ul {
+    flex-direction: column; /* Stack the items vertically on small screens */
+    align-items: center; /* Center the items */
+  }
+
+  .footer {
+    padding: 30px 15px; 
+  }
+}
